@@ -4,7 +4,6 @@ const path = require("path")
 const hbs = require("hbs")
 const forecast = require("./forecast")
 const geocode = require("./geocode")
-const { registerHelper } = require("hbs")
 
 const app = express()
 const port = process.env.PORT || 8080

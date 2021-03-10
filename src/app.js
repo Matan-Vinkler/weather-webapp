@@ -6,6 +6,7 @@ const forecast = require("../../weather-app/utils/forecast")
 const geocode = require("../../weather-app/utils/gecode")
 
 const app = express()
+const port = process.env.PORT || 8080
 
 //Define paths
 const srcPath = path.join(__dirname, "../public")
@@ -64,6 +65,6 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(8080, () => {
-    console.log("The server is up on port 8080.")
+app.listen(port, () => {
+    console.log("The server is up on port " + port + ".")
 })

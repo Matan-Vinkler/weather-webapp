@@ -2,8 +2,8 @@ const express = require("express")
 const request = require("request")
 const path = require("path")
 const hbs = require("hbs")
-const forecast = require("forecast")
-const geocode = require("geocode")
+const forecast = require("./forecast")
+const geocode = require("./geocode")
 
 const app = express()
 const port = process.env.PORT || 8080

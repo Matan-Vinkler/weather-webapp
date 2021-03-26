@@ -68,7 +68,7 @@ app.get("/weather", (req, res) => {
             return res.status(404).send({ error })
         }
 
-        forecast(latitude, longitude, (error, forecastData) => {
+        forecast(latitude, longitude, false, (error, forecastData) => {
             if (error) {
                 console.log("HTTP/1.1 404 Not Found\n")
                 return res.status(404).send({ error })

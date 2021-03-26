@@ -21,6 +21,8 @@ weatherForm.addEventListener("submit", (e) => {
                 messageTwo.textContent = data.forecast
             }
         })
+
+        document.getElementsByTagName("input")[0].value = ""
     })
 })
 

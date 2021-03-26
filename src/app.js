@@ -84,6 +84,27 @@ app.get("/weather", (req, res) => {
     })
 })
 
+app.get("/weather/current", (req, res) => {
+    console.log(req.method + " " + req.originalUrl + " HTTP/1.1")
+
+    var lat = req.query.lat
+    var long = req.query.long
+
+    forecast(lat, long, true, (error, data, location) => {
+        if(error) {
+            console.log("HTTP/1.1 404 Not Found\n")
+            return res.status(404).send({ error })
+        }
+
+        console.log("HTTP/1.1 200 OK\n")
+        res.send({
+            forecast: data,
+            location,
+            address: req.query.address
+        })
+    })
+})
+
 app.get("/help/*", (req, res) => {
     console.log(req.method + " " + req.originalUrl + " HTTP/1.1")
     console.log("HTTP/1.1 404 Not Found\n")

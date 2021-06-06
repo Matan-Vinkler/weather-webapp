@@ -47,7 +47,7 @@ app.get("/help", (req, res) => {
 
     res.render("help", {
         title: "Help",
-        help_msg: "This page has no help actually. What do you expect from a student? To provide you an help page? Have you ever though to donate your body parts while you're alive? So don't donate your brain because it's a shame for whoever that will get it."
+        help_msg: "This page has no help actually. What do you expect from a student? To provide you an help page? Have you ever though to donate your organs while you're alive? So don't donate your brain because it's a shame for whoever that will get it."
     })
 })
 
